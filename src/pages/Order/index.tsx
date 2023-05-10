@@ -1,7 +1,10 @@
+import { Form } from "../../components/Form"
+
+
 export function Order(){
     return(
         <div>
-            <h1>Order</h1>
+            <Form/>
         </div>
     )
 }

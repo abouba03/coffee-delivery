@@ -45,16 +45,16 @@ export const Items = styled.div`
         gap: 12px;
     }
     .item1{
-        background: #c47f17 ;
+        background: var(--yellow-dark) ;
     }
     .item2{
-        background: #574f4d ;
+        background: var(--base-text) ;
     }
     .item3{
-        background: #dbac2c ;
+        background: var(--yellow) ;
     }
     .item4{
-        background: #8047f8;
+        background: var(--purple);
     }
     .itemImg{
         width: 32px;

@@ -7,7 +7,7 @@ export const Container = styled.nav`
     justify-content: space-between;
     
 
-    
+    border: 1px solid red;
 `
 export const Links = styled.div`
     display: flex;
@@ -20,13 +20,13 @@ export const Links = styled.div`
         gap: 7px;
         justify-content: center;
         align-items: center;
-        background: #ebe5f9;
+        background: var(--purple-light);
         width: 143px;
         height: 38px;
         border-radius: 6px;
 
         p{
-            color: #4b2995;
+            color: var(--purple-dark);
             font-size: 14px;
         }
     }

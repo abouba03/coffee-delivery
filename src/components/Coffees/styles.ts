@@ -15,9 +15,8 @@ export const Card = styled.div`
     height: 310px;
     display: flex;
     flex-direction: column;
-    border: 1px solid red;
     border-radius: 6px 36px;
-    background: #f3f2f2;
+    background: var(--base-card);
 
     .imgCard{
         width: 120px;
@@ -43,10 +42,10 @@ export const Card = styled.div`
         align-items: center;
         justify-content: center;
         padding: 4px 8px; 
-        color: #c47f17;
+        color: var(--yellow-dark);
         font-weight: 700;
         font-size: 10px;
-        background: #f1e9c9;
+        background: var(--yellow-light);
         border-radius: 10px; 
     }
     h1{
@@ -56,7 +55,7 @@ export const Card = styled.div`
     }
     .description{
         font-size: 14px;
-        color: #8d8686;
+        color: var(--base-label);
         line-height: 18px;
         text-align: center;
         margin-bottom: 33px;
@@ -82,7 +81,7 @@ export const Card = styled.div`
             gap: 4px;
             width: 72px;
             height: 38px;
-            background: #e6e5e5;
+            background: var(--base-button);
             border-radius: 6px;
         }
         .achat{
@@ -96,7 +95,7 @@ export const Card = styled.div`
             width: 38px;
             height: 38px;
             border-radius: 6px;
-            background: #4b2995;
+            background: var(--purple-dark);
             display: flex;
             justify-content: center;
             
