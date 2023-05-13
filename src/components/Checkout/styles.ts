@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 
 export const Container = styled.div`
-    width: 100%;
+    max-width: 100%;
     padding: 0 160px;
     display: flex;
     justify-content: space-between;
@@ -15,24 +15,50 @@ export const Container = styled.div`
         margin-top: 125px;
         
     }
+
+    @media (max-width: 1150px) {
+        padding: 2% 1%;
+        
+    }
+    @media (max-width: 1000px) {
+        display: flex;
+        flex-direction: column;
+        
+    }
+    @media (max-width: 600px) {
+        .imgDelivery{
+            width: 90%;
+            height: auto;
+        }
+    }
 `
 
 export const CheckoutInfo = styled.div`
-display: flex;
-flex-direction: column;
-/* p{
-    font-size: 20px;
-    line-height: 26px;
-} */
-.subtitle{
-    margin: 4px 0 40px 0;}
-h2{
-    font-weight: 800;
-    font-size: 32px;
-    line-height: 130%;
-    color: var(--yellow-dark);
-}
+    display: flex;
+    flex-direction: column;
+    /* p{
+        font-size: 20px;
+        line-height: 26px;
+    } */
+    .subtitle{
+        margin: 4px 0 40px 0;}
+    h2{
+        font-weight: 800;
+        font-size: 32px;
+        line-height: 130%;
+        color: var(--yellow-dark);
+    }
 
+    @media (max-width: 1000px) {
+        width: 100%;
+       
+    
+    }
+    @media (max-width: 360px) {
+        h2{
+            font-size: 30px;
+        }
+    }
 `
 export const InfoOrder = styled.div`
 border: 1px solid var(--yellow-dark);
@@ -43,15 +69,35 @@ flex-direction: column;
 gap: 42px;
 width: 526px;
 height: 296px;
+
+@media (max-width: 700px) {
+        width: 100%;
+        border: 1px solid red;
+    }
+    @media (max-width: 1000px) {
+        width: 100%;
+        justify-content: center;
+        align-content: center;
+    
+    }
     
 `
 export const InfoItem = styled.div`
 display: flex;
 align-items: center;
 gap: 12px;
+p{}
 
+.yellow{
+    background: var(--yellow);
+}
+.purple{
+    background: var(--purple)
+}
+.orange{
+    background: var(--yellow-dark)
+}
 .icon{
-    background: red;
     width: 32px;
     height: 32px;
     display: flex;
@@ -59,7 +105,10 @@ gap: 12px;
     align-items: center;
     border-radius: 50%;
 }
-    
+@media (max-width: 700px) {
+        width: 100%;
+       
+    }
 `
 export const InfoItemDesc = styled.div`
     display: flex;

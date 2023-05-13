@@ -5,15 +5,25 @@ export const Container = styled.nav`
     padding: 32px 160px;
     display: flex;
     justify-content: space-between;
+
+
+    
     
 
-    border: 1px solid red;
+    
+
+    @media (max-width: 1250px) {
+        padding: 2% 2%;
+        
+    }
+
 `
 export const Links = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 20px;
+    
 
     .localisation{
         display: flex;
@@ -40,5 +50,20 @@ export const Links = styled.div`
         align-items: center;
         background: #f1e9c9;
         border-radius: 6px;
+        cursor: pointer;
+        position: relative;
+    }
+    .bulle{
+        background: var(--yellow-dark);
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        position: absolute;
+        top: -9px;
+        right: -8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
     }
 `

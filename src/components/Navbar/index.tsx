@@ -17,6 +17,7 @@ export function Navbar(){
                     <p>Porto Alegre, Rs</p>
                 </div>
                 <div className="panier">
+                    <div className="bulle"><span>0</span></div>
                     <Link to="/order">
                         <img src={imgPanier} alt="img du panier" />
                     </Link>

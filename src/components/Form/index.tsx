@@ -17,9 +17,9 @@ export function Form(){
             <Left>
                 <h2>Complete seu pedido</h2>
                 <Info>
-                    <div className="titre">
+                    <div className="a titre">
                         <img src={iconLocalisation} alt="" />
-                        <p>Endereço de Entrega</p>
+                        <h2>Endereço de Entrega</h2>
                     </div>
                     <p className="desc">Informe o endereço onde deseja receber seu pedido</p>
                     <form>
@@ -34,19 +34,19 @@ export function Form(){
                 <Pagamento>
                 <div className="titre">
                         <img src={iconDollard} alt="" />
-                        <p>Pagamento</p>
+                        <h2>Pagamento</h2>
                     </div>
                 <p className="desc">O pagamento é feito na entrega. Escolha a forma que deseja pagar</p>
                 <div className="tipos-pagamento">
-                    <div className="btn">
+                    <div className="btn vibration">
                         <img src={imgCarta} alt="" />
                         <p>Cartão de crédito</p>
                     </div>
-                    <div className="btn">
+                    <div className="btn vibration">
                         <img src={imgBanco} alt="" />
                         <p>cartão de débito</p>
                     </div>
-                    <div className="btn">
+                    <div className="btn vibration">
                         <img src={imgDinheiro} alt="" />
                         <p>dinheiro</p>
                     </div>
@@ -59,15 +59,15 @@ export function Form(){
                     <Content>
                         <img className="imgCoffee" src={imgCoffee} alt="" />
                         <div className="card-info">
-                            <p>Expresso Tradicional</p>
+                            <p>Expresso </p>
                             <div className="zoneUpdate">
                                 <div className="counter">
-                                    <img src={iconSub} alt="iconAdd" />
+                                    <img className="icon" src={iconSub} alt="iconAdd" />
                                     <span>1</span>
-                                    <img src={iconAdd} alt="iconSub" />
+                                    <img className="icon" src={iconAdd} alt="iconSub" />
                                 </div>
                                 <div className="delete-btn">
-                                    <img src={iconDelete} alt="" />
+                                    <img className="icon" src={iconDelete} alt="" />
                                     <p>REMOVER</p>
                                 </div>
                             </div>
@@ -78,15 +78,15 @@ export function Form(){
                     <Content>
                         <img className="imgCoffee" src={imgCoffee} alt="" />
                         <div className="card-info">
-                            <p>Expresso Tradicional</p>
+                            <p>Expresso </p>
                             <div className="zoneUpdate">
                                 <div className="counter">
-                                    <img src={iconSub} alt="iconAdd" />
+                                    <img className="icon" src={iconSub} alt="iconAdd" />
                                     <span>1</span>
-                                    <img src={iconAdd} alt="iconSub" />
+                                    <img className="icon" src={iconAdd} alt="iconSub" />
                                 </div>
                                 <div className="delete-btn">
-                                    <img src={iconDelete} alt="" />
+                                    <img className="icon" src={iconDelete} alt="" />
                                     <p>REMOVER</p>
                                 </div>
                             </div>
@@ -112,7 +112,7 @@ export function Form(){
 
                     <Submit>
                         <Link to="/delivery">
-                            <p>confirmar pedido</p>
+                            <p>CONFIRMAR PEDIDO</p>
                         </Link>
                     </Submit>
                 </Card>

@@ -12,7 +12,7 @@ export function Checkout(){
                 <p className="subtitle">Agora é só aguardar que logo o café chegará até você</p>
                 <InfoOrder>
                     <InfoItem>
-                        <div className="icon">
+                        <div className="icon purple">
                             <img src={iconLocal} alt="" />
                         </div>
                         <InfoItemDesc>
@@ -22,7 +22,7 @@ export function Checkout(){
                     </InfoItem>
                     <InfoItem>
                         
-                        <div className="icon">
+                        <div className="icon yellow">
                             <img src={iconChrono} alt="" />
                         </div>
                         <InfoItemDesc>
@@ -31,7 +31,7 @@ export function Checkout(){
                         </InfoItemDesc>
                     </InfoItem>
                     <InfoItem>
-                        <div className="icon">
+                        <div className="icon orange">
                             <img src={iconDollard} alt="" />
                         </div>
                         <InfoItemDesc>

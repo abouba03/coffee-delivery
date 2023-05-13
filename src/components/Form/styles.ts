@@ -4,19 +4,43 @@ export const Container = styled.div`
     width: 100%;
     padding: 0 160px;
     display: flex;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
+    gap: 5%;
+    border: 1px solid red;
+    @media (max-width: 1250px) {
+        padding: 2% 2%;
+        justify-content: space-between;
+        
+    }
+    @media (max-width: 900px) {
+        padding: 2% 2%;
+        justify-content: center;
+        flex-wrap: wrap;
+        
+    }
     
+
+
 `
 export const Left = styled.div`
-    width: 60%;
+    width: 55%;
+    margin-right: 10px;
+
+    @media (max-width: 900px) {
+        margin-right: 0;
+        
+    }
     
-    
+    @media (max-width: 500px) {
+        width: 90%;
+        
+    }
     
 `
 export const Info = styled.div`
 
     width: 100%;
-    height: 372px;
+    min-height: 372px;
     max-width: 640px;
     padding: 40px;
     background: var(--base-card);
@@ -38,45 +62,61 @@ export const Info = styled.div`
         flex-wrap: wrap;
         padding: 0 40px;
         gap: 16px;
-        input{ 
+    }
+    input{ 
             border: 1px solid var(--base-button);
             border-radius: 4px;
-        }
-        input::placeholder{
-           padding: 12px;
-           background: var(--base-card);
-        }
-        .input-cep{
-            width: 200px;
-            height: 42px;
-        }
-        .input-rua{
-            width: 100%;
-            height: 42px;
-        }
-        .input-numero{
-            width: 200px;
-            height: 42px;
-        }
-        .input-bairro{
-            width: 250px;
-            height: 42px;
-        }
-        .input-cidade{
-            width: 200px;
-            height: 42px;
-        }
-        .input-uf{
-            width: 100px;
-            height: 42px;
-        }
+            background: var(--base-button);
+            padding: 10px;
+            transition: filter 1s;
+
+            &:focus{
+                border: 2px solid var(--yellow-dark);
+                outline: none;
+                filter: brightness(.9);
+            }
+
+            &::placeholder{
+                padding: 2px;
+                background: var(--base-button);
+            }
+
     }
+    .input-cep{
+        width: 50%;
+        height: 42px;
+    }
+    .input-rua{
+        width: 90%;
+        height: 42px;
+    }
+    .input-numero{
+        width: 60%;
+        height: 42px;
+    }
+    .input-bairro{
+        width: 80%;
+        height: 42px;
+    }
+    .input-cidade{
+        width: 60%;
+        height: 42px;
+    }
+    .input-uf{
+        width: 30%;
+        height: 42px;
+    }
+
+        
+        
+
+
 `
 export const Pagamento = styled.div`
-   width: 100%;
-    height: 207px;
+    width: 100%;
+    min-height: 207px;
     max-width: 640px;
-    padding: 40px;
+    padding: 30px;
     border-radius: 6px;
     background: var(--base-card);
     margin-top: 12px;
@@ -84,12 +124,13 @@ export const Pagamento = styled.div`
     ;
     .desc{
         padding-left: 32px;
-        color: var(--);
+        color: var(--base-subtitle);
     }
-    .titre{
+    .titre, a{
         display: flex;
         gap: 10px;
         align-items: center;
+        
     } 
     .tipos-pagamento{
         display: flex;
@@ -109,21 +150,34 @@ export const Pagamento = styled.div`
         gap: 11px;
         background: var(--base-button);
         border-radius: 6px;
+        cursor: pointer;
+    }
+    .btn:hover{
+        border: 1px solid var(--purple);
+        background: var(--purple-light);
     }
     .btn p{
-        font-size: 16px;
+        font-size: 0.9rem;
+    }
+    .vibration:hover {
+        animation: vibrate 0.5s ease-in-out infinite;
     }
 `
 
 export const Right = styled.div`
-    width: 40%;
+    width: 45%;
   
-     
+    @media (max-width: 900px) {
+        margin-top: 20px;
+        width: 80%;
+       
+        
+    }
 `
 
 export const Card = styled.div`
 
-    max-width: 448px;
+
     width: 100%;
     height: 498px;
     background: var(--base-card);
@@ -134,6 +188,13 @@ export const Card = styled.div`
     padding: 40px;
     gap: 24px;
 
+    @media (max-width: 900px) {
+        justify-self: center;
+        
+    }
+    @media (max-width: 540px) {
+        padding: 40px 5px;
+    }
 
 `
 export const Content = styled.div`
@@ -145,6 +206,13 @@ gap: 20px;
 
 width: 100%;
 align-items: center;
+.icon:hover{
+    animation-name: scale;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    cursor: pointer;
+}
 
 .imgCoffee{
     width: 64px;
@@ -196,23 +264,34 @@ align-items: center;
         color: var(--base-text); 
     }
 }
+@media (max-width: 430px) {
+    .preco{
+        position: absolute;
+        right: 4px;
+        top: -5px;
+        font-size:80% ;
+        color: var(--)
+    }
+    }
 
 `
 export const Trasso = styled.div `
-    width: 368px;
+    width: 100%;
     height: 0px;
     border: 1px solid var(--base-button);
 `
     
 export const Totals = styled.div `
-    width: 368px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 13px;
+    
 
 
     .line{
         display: flex;
+        width: 100%;
         justify-content: space-between;
         align-items: center; 
     }
@@ -229,7 +308,7 @@ export const Totals = styled.div `
     }
 `
 export const Submit = styled.div `
-    width: 368px;
+    width: 100%;
     height: 46px;
     background: var(--yellow);
     color: var(--background);
@@ -241,8 +320,6 @@ export const Submit = styled.div `
     gap: 4px;
     border-radius: 6px;
     text-decoration: none;
-    
-    
 
     a{
         text-decoration: none;

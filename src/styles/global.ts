@@ -29,10 +29,12 @@ export const GlobalStyle = createGlobalStyle`
         margin: 0;
         box-sizing: border-box;
     }
+    
 
     body, input, textarea, button, p {
         font-family: 'Roboto', sans-serif;
         font-weight: 400;
+        
     }
     
     h1, h2, h3, h4, h5, h6 {
@@ -61,4 +63,34 @@ export const GlobalStyle = createGlobalStyle`
     button {
         cursor: pointer;
     }
+    html {
+         @media (max-width: 1080px) {
+            font-size: 93.75%; // 16 x 0.9375 = 15px
+        }
+
+        @media (max-width: 720px) {
+            font-size: 87.5%; // 16 x 0.875 = 14px
+        }
+    }
+
+    @keyframes vibrate {
+        0% {transform: translate(0);}
+        20% {transform: translate(-2px, 2px);}
+        40% {transform: translate(-2px, -2px);}
+        60% {transform: translate(2px, 2px);}
+        80% {transform: translate(2px, -2px);}
+        100% {transform: translate(0);}
+    }
+    @keyframes scale {
+        0% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(1.5);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+
 `

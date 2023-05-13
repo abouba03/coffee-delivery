@@ -10,7 +10,7 @@ export function Header(){
         <Container>
             <Main>
                 <h1>Encontre o café perfeito para qualquer hora do dia</h1>
-                <p>Com o Coffee Delivery você recebe seu café onde estiver, a qualquer hora</p>
+                <p className="subtitle">Com o Coffee Delivery você recebe seu café onde estiver, a qualquer hora</p>
                 <Items>
                     <div className="item ">
                         <div className="itemImg item1">
