@@ -1,7 +1,6 @@
 import iconLocal from "../../assets/iconLocal.svg"
 import iconChrono from "../../assets/iconChrono.svg"
 import iconDollard from "../../assets/iconDollardB.svg"
-import imgDelivery from "../../assets/imgDelivery.png"
 import { Container, CheckoutInfo, InfoOrder, InfoItem, InfoItemDesc } from "./styles"
 
 export function Checkout(){
@@ -41,7 +40,7 @@ export function Checkout(){
                     </InfoItem>
                 </InfoOrder>
             </CheckoutInfo>
-            <img className="imgDelivery" src={imgDelivery} alt="" />
+            
         </Container>
     )
 }

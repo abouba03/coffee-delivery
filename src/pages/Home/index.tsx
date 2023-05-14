@@ -1,13 +1,24 @@
-import { Coffees } from "../../components/Coffees";
+import { Coffee } from "../../components/Coffee";
 import { Header } from "../../components/Header";
+import { Coffees, Container } from "./styles";
 
 
 
 export function Home(){
     return(
-        <div>
+        <Container>
             <Header/>
-            <Coffees/>
-        </div>
+            <h2>Nossos cafés</h2>
+            <Coffees>
+                <Coffee/>
+                <Coffee/>
+                <Coffee/>
+                <Coffee/>
+                <Coffee/>
+                <Coffee/>
+                <Coffee/>
+                <Coffee/>
+            </Coffees>
+        </Container>
     )
 }

@@ -1,10 +1,17 @@
 import styled from "styled-components";
 
 export const Container = styled.nav`
-    max-width: 100%;
+    width: 100%;
     padding: 32px 160px;
     display: flex;
     justify-content: space-between;
+
+    
+    img:hover{
+        animation-name: scale;
+        animation-duration: 1.5s;
+        cursor: pointer;
+    }
 
 
     
@@ -16,6 +23,8 @@ export const Container = styled.nav`
         padding: 2% 2%;
         
     }
+
+
 
 `
 export const Links = styled.div`

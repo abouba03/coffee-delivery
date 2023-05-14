@@ -1,9 +1,7 @@
 import styled from "styled-components"
 
 export const Container = styled.section`
-    width: 100%;
-    padding: 0 160px;
-    margin-bottom: 30px ;
+    margin-bottom: 20px ;
 
     .icon:hover {
         animation-name: scale;
@@ -11,27 +9,9 @@ export const Container = styled.section`
         animation-iteration-count: infinite;
         animation-direction: alternate;
         cursor: pointer;
-    }
-    .vibration:hover {
-        animation: vibrate 0.5s ease-in-out infinite;
-    }      
-    
-    
-h2{
-    margin: 100px 0 54px 0;
-    font-size: 32px;
-}
-    @media (max-width: 1250px) {
-        padding: 2% 2%;
-        
-    }
+    }   
 
-`
-export const Cards = styled.section`
-    display: flex;
-    flex-wrap: wrap;
-    gap: 32px;
-    justify-content: center;
+
 `
 export const Card = styled.div`
     padding: 0 20px;

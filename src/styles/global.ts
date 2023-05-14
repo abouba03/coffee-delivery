@@ -55,7 +55,8 @@ export const GlobalStyle = createGlobalStyle`
         cursor: not-allowed;
     }
     body {
-        
+        max-width: 1540px;
+        margin: 0 auto;
         background-color: var(--background);
         -webkit-font-smoothing: antialiased;
     }

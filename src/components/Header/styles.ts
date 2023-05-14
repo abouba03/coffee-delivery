@@ -1,18 +1,13 @@
 import styled from "styled-components"
 
 export const Container = styled.section`
-    margin-top: 64px;
-    width: 100%;
-    padding: 0 160px;
+    
     display: flex;
     align-items: center;
     justify-content: space-between;
     
 
-    @media (max-width: 1250px) {
-        padding: 0% 2%;
-        
-    }
+    
 
     @media (max-width: 880px) {
         display: flex;
@@ -48,7 +43,7 @@ export const Main = styled.div`
     } 
     h1{
         font-size: 32px;
-        ine-height: 42px;
+        line-height: 42px;
     }
     }
    
