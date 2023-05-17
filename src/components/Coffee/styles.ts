@@ -10,6 +10,18 @@ export const Container = styled.section`
         animation-direction: alternate;
         cursor: pointer;
     }   
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 64px;
+    width: 100%;
+    gap: 22px;
+    
+    li{
+        list-style: none;
+    }
 
 
 `
@@ -48,9 +60,9 @@ export const Card = styled.div`
         justify-content: center;
         padding: 4px 8px; 
         color: var(--yellow-dark);
-        font-weight: 700;
+        font-weight: bold;
         font-size: 10px;
-        background: var(--yellow-light);
+        background: var(--yellow-dark);
         border-radius: 10px; 
     }
     h1{

@@ -19,6 +19,7 @@ export const Container = styled.div`
 export const Coffees = styled.section`
     display: flex;
     justify-content: center;
+    flex-direction: row;
     align-items: center;
     flex-wrap: wrap;
     margin-top: 64px;

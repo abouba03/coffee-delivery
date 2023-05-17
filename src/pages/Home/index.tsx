@@ -1,4 +1,4 @@
-import { Coffee } from "../../components/Coffee";
+import { CoffeeList } from "../../components/Coffee";
 import { Header } from "../../components/Header";
 import { Coffees, Container } from "./styles";
 
@@ -10,14 +10,7 @@ export function Home(){
             <Header/>
             <h2>Nossos cafés</h2>
             <Coffees>
-                <Coffee/>
-                <Coffee/>
-                <Coffee/>
-                <Coffee/>
-                <Coffee/>
-                <Coffee/>
-                <Coffee/>
-                <Coffee/>
+                <CoffeeList/>
             </Coffees>
         </Container>
     )
