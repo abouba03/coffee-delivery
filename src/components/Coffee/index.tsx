@@ -6,6 +6,7 @@ import iconPanier from "../../assets/iconPanier.svg";
 import "aos/dist/aos.css";
 import { useState, useEffect } from "react";
 import { api } from "../../service/api";
+import axios from "axios";
 
 interface Coffee {
   id: number;
@@ -21,8 +22,8 @@ export function CoffeeList() {
 
   useEffect(() => {
     async function loadCoffees() {
-      await api.get("/coffees")
-      .then((response) => setCoffees(response.data));
+      const response = await api.get("/coffees");
+      setCoffees(response.data);
     }
 
     loadCoffees();
@@ -33,7 +34,6 @@ export function CoffeeList() {
       coffee.id === coffeeId ? { ...coffee, amount: coffee.amount + 1 } : coffee
     );
     setCoffees(updatedCoffees);
-    updateQuantityInDB(coffeeId, updatedCoffees.find((coffee) => coffee.id === coffeeId)?.amount || 0);
   };
 
   const handleDecrease = (coffeeId: number) => {
@@ -41,24 +41,25 @@ export function CoffeeList() {
       coffee.id === coffeeId && coffee.amount >= 1 ? { ...coffee, amount: coffee.amount - 1 } : coffee
     );
     setCoffees(updatedCoffees);
-    updateQuantityInDB(coffeeId, updatedCoffees.find((coffee) => coffee.id === coffeeId)?.amount || 0);
+    
   };
 
-  const updateQuantityInDB = (coffeeId: number, newQuantity: number) => {
-    fetch(`http://localhost:3001/coffees/${coffeeId}`, {
-      method: "PATCH",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ amount: newQuantity }),
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        console.log("Quantité mise à jour dans la base de données :", data);
-      })
-      .catch((error) => {
-        console.error("Erreur lors de la mise à jour de la quantité dans la base de données :", error);
+  const updateQuantityInDB = async (coffeeId: number, newQuantity: number) => {
+    try {
+      const response = await axios.patch(`http://localhost:3001/coffees/${coffeeId}`, {
+        amount: newQuantity
       });
+      console.log("Quantité mise à jour dans la base de données :", response.data);
+    } catch (error) {
+      console.error("Erreur lors de la mise à jour de la quantité dans la base de données :", error);
+    }
+  };
+
+  const handlePanierClick = (coffeeId: number) => {
+    const coffee = coffees.find((coffee) => coffee.id === coffeeId);
+    if (coffee) {
+      updateQuantityInDB(coffeeId, coffee.amount);
+    }
   };
 
   return (
@@ -93,7 +94,7 @@ export function CoffeeList() {
                       alt="iconSub"
                     />
                   </div>
-                  <div className="panier">
+                  <div className="panier" onClick={() => handlePanierClick(coffee.id)}>
                     <img className="icon" src={iconPanier} alt="" />
                   </div>
                 </div>

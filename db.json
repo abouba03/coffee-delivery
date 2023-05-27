@@ -34,7 +34,7 @@
       "name": "Expresso Gelado",
       "description": "Bebida preparada com café expresso e cubos de gelo",
       "price": 9.9,
-      "amount": 0
+      "amount": 1
     },
     {
       "id": 5,
