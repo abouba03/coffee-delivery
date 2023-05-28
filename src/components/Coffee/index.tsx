@@ -51,7 +51,7 @@ export function CoffeeList() {
       });
       console.log("Quantité mise à jour dans la base de données :", response.data);
     } catch (error) {
-      console.error("Erreur lors de la mise à jour de la quantité dans la base de données :", error);
+      console.error("Erreur lors de la mise à jour de la quantité du coffee dans la base de données :", error);
     }
   };
 
