@@ -1,40 +1,19 @@
+import { useContext, useEffect, useState } from "react";
+import { CoffeeContext } from "../../context/CoffeeContext";
 import { Container, Links } from "./styles";
 import imgLocalisation from "../../assets/Vector-localisation.svg";
 import imgPanier from "../../assets/Vector-panier.svg";
 import logoImg from "../../assets/Logo.svg";
 import { Link } from "react-router-dom";
-import { useEffect, useState } from "react";
-import axios from "axios";
-
-interface Coffee {
-  id: number;
-  avatar: string;
-  description: string;
-  name: string;
-  price: number;
-  amount: number;
-}
 
 export function Navbar() {
+  const { coffees } = useContext(CoffeeContext);
   const [orderCount, setOrderCount] = useState<number>(0);
 
   useEffect(() => {
-    const interval = setInterval(fetchOrderCount, 1000); // Interroger toutes les 5 secondes
-
-    return () => {
-      clearInterval(interval);
-    };
-  }, []);
-
-  async function fetchOrderCount() {
-    try {
-      const response = await axios.get<Coffee[]>("http://localhost:3001/coffees");
-      const orderedCoffees = response.data.filter((coffee) => coffee.amount > 0);
-      setOrderCount(orderedCoffees.length);
-    } catch (error) {
-      console.error("Erreur lors de la récupération du nombre de commandes :", error);
-    }
-  }
+    const orderedCoffees = coffees.filter((coffee) => coffee.amount > 0);
+    setOrderCount(orderedCoffees.length);
+  }, [coffees]);
 
   return (
     <div>
