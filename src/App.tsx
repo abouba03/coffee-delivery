@@ -7,6 +7,7 @@ import { Delivery } from './pages/Delivery';
 import { CoffeeProvider } from "./context/CoffeeContext";
 import { Navbar } from "./components/Navbar";
 
+
 function App() {
   return (
     <CoffeeProvider>

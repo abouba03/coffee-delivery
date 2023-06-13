@@ -8,11 +8,15 @@ export const Container = styled.div`
     border-radius: 6px;
     background: var(--base-card);
     margin-top: 12px;
+    animation: slideIn 1.5s ease-in-out;
+    h2{
+        animation: bounce 1s ease-in-out 4.8s 1;
+    }
     
-    ;
     .desc{
         padding-left: 32px;
         color: var(--base-subtitle);
+        animation: bounce 1s ease-in-out 5.2s 1;
     }
     .titre, a{
         display: flex;
@@ -27,6 +31,8 @@ export const Container = styled.div`
         flex-wrap: wrap;
         align-items: center;
         margin: 32px 0 ;
+        animation: bounce 1s ease-in-out 5.6s 1;
+        
     }
     .btn{
         display: flex;
@@ -39,6 +45,7 @@ export const Container = styled.div`
         background: var(--base-button);
         border-radius: 6px;
         cursor: pointer;
+        animation: shake .1s ease-in-out 6s 7;
     }
     .btn:hover{
         border: 1px solid var(--purple);

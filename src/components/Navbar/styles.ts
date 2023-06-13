@@ -8,8 +8,8 @@ export const Container = styled.nav`
 
     
     img:hover{
-        animation-name: scale;
-        animation-duration: 1.5s;
+        animation-name: scale 4;
+        animation-duration: 1s;
         cursor: pointer;
     }
 

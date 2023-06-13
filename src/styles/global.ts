@@ -21,7 +21,7 @@ export const GlobalStyle = createGlobalStyle`
         --purple-light: #EBE5F9;
 
     }
-
+    
 
 
     *{
@@ -34,6 +34,7 @@ export const GlobalStyle = createGlobalStyle`
     body, input, textarea, button, p {
         font-family: 'Roboto', sans-serif;
         font-weight: 400;
+       
         
     }
     
@@ -93,5 +94,39 @@ export const GlobalStyle = createGlobalStyle`
             transform: scale(1);
         }
     }
+    @keyframes slideIn {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slideOut {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes bounce {
+  0% { transform: translateY(0); }
+  25% { transform: translateY(-10px); }
+  50% { transform: translateY(0); }
+  75% { transform: translateY(-5px); }
+  100% { transform: translateY(0); }
+}
 
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(0); }
+  75% { transform: translateX(5px); }
+  100% { transform: translateX(0); }
+}
 `

@@ -32,8 +32,10 @@ export const Totals = styled.div `
     display: flex;
     flex-direction: column;
     gap: 13px;
-    
-
+    animation: slideOut 1.5s ease-in-out;
+    p{
+        animation: bounce 1s ease-in-out 3s 1;
+    }
 
     .line{
         display: flex;
@@ -51,6 +53,7 @@ export const Totals = styled.div `
         align-items: center;
         text-align: right;
         color: var(--base-subtitle);
+        
     }
 `
 export const Submit = styled.div `
@@ -66,9 +69,10 @@ export const Submit = styled.div `
     gap: 4px;
     border-radius: 6px;
     text-decoration: none;
-
+    animation: slideOut 1.5s ease-in-out;
     a{
         text-decoration: none;
         color: white;
+        animation: shake .1s ease-in-out 6s 7;
     }
 `

@@ -14,6 +14,9 @@ export const Container = styled.div`
         margin-top: 125px;
         
     }
+    .imgDelivery{
+        animation: slideIn 1s ease-in-out;
+    }
 
     @media (max-width: 1150px) {
         padding: 2% 1%;

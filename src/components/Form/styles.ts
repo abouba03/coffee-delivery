@@ -2,6 +2,8 @@ import styled from "styled-components";
 
 export const Container = styled.div`
 width: 100%;
+animation: slideIn 1.5s ease-in-out;
+
 `
 export const Info = styled.div`
 
@@ -16,11 +18,13 @@ export const Info = styled.div`
     .desc{
         padding-left: 32px;
         color: var(--);
+        animation: bounce 1s ease-in-out 2s 1;
     }
     .titre{
         display: flex;
         gap: 10px;
         align-items: center;
+        animation: bounce 1s ease-in-out 1.6s 1;
     }
     form{
         margin-top: 32px;
@@ -35,6 +39,7 @@ export const Info = styled.div`
             background: var(--base-button);
             padding: 10px;
             transition: filter 1s;
+            animation: bounce 1s ease-in-out 2s 1;
 
             &:focus{
                 border: 2px solid var(--yellow-dark);
@@ -51,26 +56,32 @@ export const Info = styled.div`
     .input-cep{
         width: 50%;
         height: 42px;
+        animation-delay: 2.4s;
     }
     .input-rua{
         width: 90%;
         height: 42px;
+        animation-delay: 2.8s;
     }
     .input-numero{
         width: 60%;
         height: 42px;
+        animation-delay: 3.2s;
     }
     .input-bairro{
         width: 80%;
         height: 42px;
+        animation-delay: 3.6s;
     }
     .input-cidade{
         width: 60%;
         height: 42px;
+        animation-delay: 4s;
     }
     .input-uf{
         width: 30%;
         height: 42px;
+        animation-delay: 4.4s;
     }
 
     @media (max-width: 900px) {

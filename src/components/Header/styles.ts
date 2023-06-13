@@ -6,8 +6,11 @@ export const Container = styled.section`
     align-items: center;
     justify-content: space-between;
     
-
     
+    background-image: url("../");
+    .imgHeader{
+        animation: slideOut 1.5s ease-in-out;
+    }
 
     @media (max-width: 880px) {
         display: flex;
@@ -31,6 +34,10 @@ export const Main = styled.div`
         font-size: 48px;
         line-height: 62px;
         margin-bottom: 16px;
+        animation: bounce 1s ease-in-out 1s 1;
+    }
+    .subtitle{
+        animation: bounce 1s ease-in-out 1.4s 1;
     }
     p{
         font-size: 20px;
@@ -44,9 +51,10 @@ export const Main = styled.div`
     h1{
         font-size: 32px;
         line-height: 42px;
+        
     }
     }
-   
+    animation: slideIn 1.5s ease-in-out;
 `
 export const Items = styled.div`
     display: grid;
@@ -68,6 +76,7 @@ export const Items = styled.div`
         
         align-items: center;
         gap: 12px;
+        animation: bounce 1s ease-in-out 1.9s 1;
     }
     .item1{
         background: var(--yellow-dark) ;

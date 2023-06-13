@@ -1,13 +1,20 @@
 import { useContext } from "react";
 import { CoffeeContext } from "../../context/CoffeeContext";
 import { Container, Card } from "./styles";
-import expressoTradicional from "../../assets/expressoTradicional.png";
 import iconAdd from "../../assets/iconAdd.svg";
 import iconSub from "../../assets/iconSub.svg";
 import iconPanier from "../../assets/iconPanier.svg";
+import React, { useEffect } from "react";
+import AOS from "aos";
 import "aos/dist/aos.css";
 
+
 export function CoffeeList() {
+  useEffect(() => {
+    AOS.init();
+  }, []);
+  
+
   const { coffees, updateCoffeeAmount } = useContext(CoffeeContext);
 
   const handleIncrease = (coffeeId: number) => {
@@ -32,11 +39,11 @@ export function CoffeeList() {
   };
 
   return (
-    <Container>
+    <Container >
       {coffees.map((coffee) => (
-        <li key={coffee.id}>
+        <li key={coffee.id} data-aos="zoom-out-up" data-aos-duration="1500">
           <Card>
-            <img className="imgCard" src={expressoTradicional} alt="" />
+            <img className="imgCard" src={coffee.avatar} alt="" />
             <div className="content">
               <div className="type">
                 <p>TRADICIONAL</p>
@@ -45,7 +52,7 @@ export function CoffeeList() {
               <p className="description">{coffee.description}</p>
               <div className="details">
                 <p>
-                  RS<span> {coffee.price}</span>
+                  <span> {coffee.price.toLocaleString("fr-FR", { style: "currency", currency: "EUR" })}</span>
                 </p>
                 <div className="achat">
                   <div className="counter">

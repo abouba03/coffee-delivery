@@ -13,15 +13,46 @@ interface Coffee {
 interface CoffeeContextProps {
   coffees: Coffee[];
   updateCoffeeAmount: (coffeeId: number, newAmount: number) => void;
+  modoPagamento: string;
+  setModoPagamento: (modoPagamento: string) => void;
+}
+
+interface FormContextProps {
+  rua: string;
+  cep: string;
+  cidade: string;
+  bairro: string;
+  uf: string;
+  setCEP: (value: string) => void;
+  setRua: (value: string) => void;
+  setCidade: (value: string) => void;
+  setBairro: (value: string) => void;
+  setUf: (value: string) => void;
 }
 
 export const CoffeeContext = createContext<CoffeeContextProps>({
   coffees: [],
-  updateCoffeeAmount: () => {}
+  updateCoffeeAmount: () => {},
+  modoPagamento: "",
+  setModoPagamento: () => {},
+});
+
+export const FormContext = createContext<FormContextProps>({
+  cep: "",
+  rua: "",
+  cidade: "",
+  bairro: "",
+  uf: "",
+  setCEP: () => {},
+  setRua: () => {},
+  setCidade: () => {},
+  setBairro: () => {},
+  setUf: () => {},
 });
 
 export function CoffeeProvider({ children }: { children: React.ReactNode }) {
   const [coffees, setCoffees] = useState<Coffee[]>([]);
+  const [modoPagamento, setModoPagamento] = useState("");
 
   useEffect(() => {
     async function fetchCoffees() {
@@ -51,10 +82,37 @@ export function CoffeeProvider({ children }: { children: React.ReactNode }) {
 
   const contextValue: CoffeeContextProps = {
     coffees,
-    updateCoffeeAmount
+    updateCoffeeAmount,
+    modoPagamento,
+    setModoPagamento,
   };
 
   return (
-    <CoffeeContext.Provider value={contextValue}>{children}</CoffeeContext.Provider>
+    <CoffeeContext.Provider value={contextValue}>
+      <FormProvider>{children}</FormProvider>
+    </CoffeeContext.Provider>
   );
+}
+
+export function FormProvider({ children }: { children: React.ReactNode }) {
+  const [cep, setCEP] = useState("");
+  const [rua, setRua] = useState("");
+  const [cidade, setCidade] = useState("");
+  const [bairro, setBairro] = useState("");
+  const [uf, setUf] = useState("");
+
+  const contextValue: FormContextProps = {
+    cep,
+    rua,
+    cidade,
+    bairro,
+    uf,
+    setCEP,
+    setRua,
+    setCidade,
+    setBairro,
+    setUf,
+  };
+
+  return <FormContext.Provider value={contextValue}>{children}</FormContext.Provider>;
 }

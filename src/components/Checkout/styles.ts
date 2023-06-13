@@ -3,6 +3,7 @@ import styled from "styled-components"
 
 export const Container = styled.div`
     width: 100%;
+    animation: slideIn 2s ease-in-out;
 `
 
 export const CheckoutInfo = styled.div`
@@ -13,12 +14,16 @@ export const CheckoutInfo = styled.div`
         line-height: 26px;
     } */
     .subtitle{
-        margin: 4px 0 40px 0;}
+        margin: 4px 0 40px 0;
+        animation: bounce 1s ease-in-out 2.4s 1;
+    }
+
     h2{
         font-weight: 800;
         font-size: 32px;
         line-height: 130%;
         color: var(--yellow-dark);
+        animation: bounce 1s ease-in-out 2s 1;
     }
 
     @media (max-width: 1000px) {
@@ -41,6 +46,8 @@ flex-direction: column;
 gap: 42px;
 width: 526px;
 height: 296px;
+animation: bounce 1s ease-in-out 3s 1;
+
 
 @media (max-width: 700px) {
         width: 100%;

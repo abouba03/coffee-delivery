@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.div`
 width: 100%;
+animation: slideIn 1.5s ease-in-out;
 `
 export const Content = styled.div`
 position: relative;
