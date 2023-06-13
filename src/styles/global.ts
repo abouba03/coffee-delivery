@@ -21,7 +21,6 @@ export const GlobalStyle = createGlobalStyle`
         --purple-light: #EBE5F9;
 
     }
-    
 
 
     *{

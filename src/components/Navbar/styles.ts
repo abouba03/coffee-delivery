@@ -13,12 +13,6 @@ export const Container = styled.nav`
         cursor: pointer;
     }
 
-
-    
-    
-
-    
-
     @media (max-width: 1250px) {
         padding: 2% 2%;
         
@@ -33,7 +27,6 @@ export const Links = styled.div`
     align-items: center;
     gap: 20px;
     
-
     .localisation{
         display: flex;
         gap: 7px;
@@ -46,7 +39,7 @@ export const Links = styled.div`
 
         p{
             color: var(--purple-dark);
-            font-size: 14px;
+            font-size: 15px;
         }
     }
 
